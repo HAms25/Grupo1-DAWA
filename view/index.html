@@ -1,12 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Laravel</title>
+
+<!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+<!-- Agregar los estilos -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+ 
+   
+   <!-- Estilos -->
+   <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+   .container{
+       width: 100%;
+       height: 100vh;
+       background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://image.winudf.com/v2/image1/Y29tLmFwcC5wZWxpc2ZsaXhfc2NyZWVuXzRfMTYyMDI2MzkwM18wMDk/screen-4.jpg?fakeurl=1&type=.jpg);
+       background-position: center;
+       background-size: cover;
+       padding-left: 8%;
+       padding-right: 8%;
+       box-sizing: border-box;
+   }
+   .navbar{
+       height: 12%;
+       display: flex;
+       align-items: center;
+   }
+   .logo{
+       width: 50px;
+       cursor: pointer;
+   }
+   .menu-icon{
+       width: 30px;
+       cursor: pointer;
+       margin-left: 40px;
+   }
+   nav{
+       flex: 1;
+       text-align: right;
+   }
+   nav ul li{
+       list-style: none;
+       display: inline-block;
+       margin-left: 60px;
+   }
+   nav ul li a{
+       text-decoration:solid;
+       color: #fff;
+       font-size: 13px;
+   }
+  
+   .row{
+       display: flex;
+       height: 88%;
+       align-items: center;
+   }
+   .col{
+     flex-basis: 50%;
+   }
+   h1{
+       color: #fff;
+       font-size: 100px;
+   }
+   p{
+       color: #fff;
+       font-size: 11px;
+       line-height: 15px;
+   }
+   button{
+       width: 180px;
+       color: #000;
+       font-size: 12px;
+       padding: 12px 0;
+       background: #fff;
+       border: 0;
+       border-radius: 20px;
+       outline: none;
+       margin-top: 30px;
+   }
+.card{
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15 px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin:10px 15px;
     
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+.card1{
+    background:url(https://i.pinimg.com/564x/16/bc/f9/16bcf90bd9a6773d8dfcef991c14febd.jpg);
+    background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  cursor: pointer;
+}
+.card2{
+    background:url(https://i.pinimg.com/564x/45/15/29/451529ca0e703d408ac2e2843b1f0711.jpg);
+    background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  cursor: pointer;
+}
+.card3{
+    background:url(https://i.pinimg.com/564x/44/6b/03/446b032a2ca0ec2b656a739d3835e128.jpg);
+    background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  cursor: pointer;
+}
+.card4{
+    background:url(https://i.pinimg.com/564x/df/68/bf/df68bfe92999fd3cdba04972a92866ca.jpg);
+    background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  cursor: pointer;
+}
+.car5{
+    background: url(https://i.pinimg.com/564x/8a/27/09/8a270914124074fd6b89d5eaec976229.jpg);
+    background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  cursor: pointer;
+}
+.card6{
+    background: url(https://i.pinimg.com/736x/74/ea/ae/74eaaea08e03a01281f03768d2e8555d.jpg);
+    background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+    </style>
+
+    </head>
+
+<!-- Contenido de todo el cuerpo -->
+
+    <body>
+ <div class="container">
+    <div class="navbar">
+       
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+               <li><input type="text" class="search-box" placeholder="buscar"> </li>
+               <li><a href="<?php echo e(route('login')); ?>">LOGIN</a></button> </li>
+              <li> <a href="<?php echo e(route('register')); ?>" class="login-enlace">REGISTRER</a></li>
+            </ul>
+        </nav>
+        
+    </div>
+    <div class="row">
+        <div class="col">
+        <H1>ALKAHINA</H1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur facere consequatur expedita soluta, aspernatur voluptatibus, qui unde blanditiis nisi eos rerum voluptate minima quod reiciendis iste necessitatibus sit nostrum fugit.</p>
+        <button type="button">Comenzar ahora</button>
+        </div>
+        <div class="col">
+         <div class="card card1">
+             <H4></H4>
+             <br>
+             
+         </div>
+         <div class="card card2">
+             <h4></h4>
+             <br>
+             
+     
+         </div>
+         <div class="card card3">
+             <h4></h4>
+             <br>
+            
+         </div>
+         <div class="card card4">
+            <h4></h4>
+            <br>
+             
+         </div>
+
+        </div>
+    </div>
+ </div>
+
+
+
 </body>
 </html>
